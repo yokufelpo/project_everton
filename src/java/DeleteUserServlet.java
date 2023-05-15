@@ -22,7 +22,7 @@ public class DeleteUserServlet extends HttpServlet {
 
     try {
       Class.forName("com.mysql.jdbc.Driver");
-      Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/mydatabase", "root", "password");
+      Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/users", "root", "123a");
 
       PreparedStatement ps = conn.prepareStatement("DELETE FROM users WHERE id=?");
       ps.setInt(1, id);
