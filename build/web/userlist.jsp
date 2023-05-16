@@ -32,5 +32,6 @@
             </tr>
         </c:forEach>
     </table>
+            <a href="newuser.jsp">Criar Novo Usuário</a>
 </body>
 </html>
