@@ -1,20 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Editar Usu√°rio</title>
+<link rel="stylesheet" href="css/style.cc">
+<title>Editar Usu·rio</title>
+    <style>
+             * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    }
+
+    body {
+        font-family: 'Helvetica', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+         background-image: linear-gradient(to right, #736C5F, #595036);
+        color: white;
+        box-sizing: border-box;
+        padding: 0;  
+
+    }
+    h1 {
+        font-size: 60px;
+    }
+    
+    .cont {
+       padding: 20px;
+       gap: 90px;
+    }
+    .input-cont {
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    input {
+        height: 35px;
+    }
+        
+    </style>
 </head>
 <body>
-    <h1>Editar Usu√°rio</h1>
-    <form action="UpdateUserServlet" method="post">
+    <h1>Editar Usu·rio</h1>
+    <form class="cont" action="UpdateUserServlet" method="post">
         <input type="hidden" name="id" value="${id}" />
-        <label for="username">Nome de Usu√°rio:</label>
-        <input type="text" name="username" value="${username}" /><br />
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" value="${email}" /><br />
+        <label class="input-cont" for="username">Username:</label>
+        <input type="text" name="username" value="${user}" /><br />
+        <label class="input-cont" for="senha">Password:</label>
+        <input type="password" name="esenha" value="${senha}" /><br />
         <input type="submit" value="Salvar" />
+        <input type="submit" value="Salvar" href="userlist.jsp" />
     </form>
     <a href="userlist.jsp">Voltar</a>
 </body>
